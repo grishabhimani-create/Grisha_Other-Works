@@ -1,3 +1,6 @@
-# Prectice exercise.
+# prectice exercise
 
-print("Hello , world !")
+# Take user input and display it
+
+name = input("Enter your name :")
+print("you entared :", name)
