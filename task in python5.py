@@ -1,21 +1,19 @@
-# Simulate a 1D array using a list
+# Parent class
+class Animal:
+    def speak(self):
+        print("Animal makes a sound")
 
-arr = [10, 20, 30, 40, 50]
 
-print("Original Array:", arr)
+# Child class
+class Dog(Animal):
+    def speak(self):
+        print("Woof!")
 
-# Insert an element
-arr.append(60)
-print("After Inserting 60:", arr)
 
-# Delete an element
-arr.remove(30)
-print("After Deleting 30:", arr)
+# Create objects
+animal = Animal()
+dog = Dog()
 
-# Search for an element
-search = int(input("Enter element to search: "))
-
-if search in arr:
-    print(search, "found in the array.")
-else:
-    print(search, "not found in the array.")
+# Call methods
+animal.speak()
+dog.speak()
