@@ -1,15 +1,14 @@
-# Dictionary of 3 students
+# List of student names
+students = ["Rahul", "Amit", "Priya", "Neha", "Karan"]
 
-students = {
-    "Student1": {"name": "Amit", "age": 18, "marks": 85},
-    "Student2": {"name": "Priya", "age": 19, "marks": 92},
-    "Student3": {"name": "Rahul", "age": 18, "marks": 78}
-}
+# List of marks
+marks = [78, 92, 85, 67, 90]
 
-# Print student details
-for student, details in students.items():
-    print(student)
-    print("Name:", details["name"])
-    print("Age:", details["age"])
-    print("Marks:", details["marks"])
-    print()
+# Sort student names alphabetically
+students.sort()
+
+# Sort marks in descending order
+marks.sort(reverse=True)
+
+print("Student Names (Alphabetical):", students)
+print("Marks (Descending):", marks)
