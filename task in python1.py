@@ -1,22 +1,12 @@
-# Count vowels, consonants, spaces, and words
+# Function to return a greeting
 
-sentence = input("Enter a sentence: ")
+def greet(name, age):
+    return f"Hello {name}! You are {age} years old."
 
-vowels = 0
-consonants = 0
-spaces = 0
+# User input
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
 
-for ch in sentence:
-    if ch.lower() in "aeiou":
-        vowels += 1
-    elif ch.isalpha():
-        consonants += 1
-    elif ch == " ":
-        spaces += 1
-
-words = len(sentence.split())
-
-print("Vowels:", vowels)
-print("Consonants:", consonants)
-print("Spaces:", spaces)
-print("Words:", words)
+# Call the function
+message = greet(name, age)
+print(message)
