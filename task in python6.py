@@ -1,13 +1,37 @@
-# Create a 3x3 matrix
+from abc import ABC, abstractmethod
+import math
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+# Abstract class
+class Shape(ABC):
 
-# Print the matrix row by row
-print("Matrix:")
+    @abstractmethod
+    def area(self):
+        pass
 
-for row in matrix:
-    print(row)
+
+# Child class Circle
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+
+# Child class Rectangle
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+
+# Create objects
+circle = Circle(7)
+rectangle = Rectangle(10, 5)
+
+# Display areas
+print("Area of Circle:", circle.area())
+print("Area of Rectangle:", rectangle.area())
