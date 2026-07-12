@@ -1,5 +1,12 @@
-# Taking the user's name as input
-name = input("Enter your name: ")
+# Grade Calculator
 
-# Greet the user with their name
-print(f"Hello, {name}! Welcome to Python!")
+marks = float(input("Enter your marks: "))
+
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    print("Grade: B")
+elif marks >= 60:
+    print("Grade: C")
+else:
+    print("Grade: D")
