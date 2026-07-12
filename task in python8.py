@@ -1,19 +1,22 @@
-# Number Guessing Game
+# List of dictionaries for 5 products
 
-secret_number = 7
-tries = 3
+products = [
+    {"name": "Laptop", "price": 50000, "qty": 5},
+    {"name": "Mobile", "price": 25000, "qty": 10},
+    {"name": "Headphones", "price": 3000, "qty": 15},
+    {"name": "Keyboard", "price": 1500, "qty": 20},
+    {"name": "Monitor", "price": 12000, "qty": 8}
+]
 
-for i in range(tries):
-    guess = int(input("Enter your guess: "))
+# Find the most expensive product
+most_expensive = products[0]
 
-    if guess == secret_number:
-        print("Congratulations! You guessed the correct number.")
-        break
-    else:
-        print("Wrong guess!")
+for product in products:
+    if product["price"] > most_expensive["price"]:
+        most_expensive = product
 
-        if i < tries - 1:
-            print("Try again.")
-            continue
-        else:
-            print("Game Over! The correct number was", secret_number)
+# Print the most expensive product
+print("Most Expensive Product:")
+print("Name:", most_expensive["name"])
+print("Price:", most_expensive["price"])
+print("Quantity:", most_expensive["qty"])
