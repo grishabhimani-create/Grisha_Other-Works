@@ -1,16 +1,13 @@
-# Set Operations
+# Create a 3x3 matrix
 
-set1 = {"Apple", "Banana", "Mango", "Orange", "Grapes"}
-set2 = {"Mango", "Orange", "Pineapple", "Kiwi", "Apple"}
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-print("Set 1:", set1)
-print("Set 2:", set2)
+# Print the matrix row by row
+print("Matrix:")
 
-# Union
-print("Union:", set1.union(set2))
-
-# Intersection
-print("Intersection:", set1.intersection(set2))
-
-# Difference
-print("Difference (set1 - set2):", set1.difference(set2))
+for row in matrix:
+    print(row)
