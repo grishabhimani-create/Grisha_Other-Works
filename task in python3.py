@@ -1,17 +1,21 @@
-# 1. Integer (Whole number)
-age = 16
+# Print day name using match-case
 
-# 2. Float (Decimal number)
-gpa = 3.85
+day = int(input("Enter a number (1-7): "))
 
-# 3. String (Text)
-language = "Python"
-
-# 4. Boolean (True or False)
-is_fun = True
-
-# Printing each variable and its datatype
-print("Variable:", age, "| Type:", type(age))
-print("Variable:", gpa, "| Type:", type(gpa))
-print("Variable:", language, "| Type:", type(language))
-print("Variable:", is_fun, "| Type:", type(is_fun))
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("Invalid day number")
