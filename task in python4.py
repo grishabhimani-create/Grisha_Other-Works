@@ -1,9 +1,7 @@
-# Multiplication Table using while loop
+# Create a tuple of 5 cities
 
-num = int(input("Enter a number: "))
+cities = ["Mumbai", "Delhi", "Surat", "Pune", "Jaipur"]
 
-i = 1
+cities[1] = "Ahmedabad"
 
-while i <= 10:
-    print(num, "x", i, "=", num * i)
-    i += 1
+print(cities)
