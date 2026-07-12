@@ -1,12 +1,21 @@
-# Function to return a greeting
+# Create Car class
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
 
-def greet(name, age):
-    return f"Hello {name}! You are {age} years old."
+    def display(self):
+        print("Brand:", self.brand)
+        print("Model:", self.model)
+        print("Year:", self.year)
+        print()
 
-# User input
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
 
-# Call the function
-message = greet(name, age)
-print(message)
+# Create two objects
+car1 = Car("Toyota", "Fortuner", 2022)
+car2 = Car("Honda", "City", 2021)
+
+# Print details
+car1.display()
+car2.display()
