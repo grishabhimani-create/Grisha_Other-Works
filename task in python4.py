@@ -1,15 +1,28 @@
-# Sort a list of tuples by the second element using lambda
+# Parent class
+class Animal:
+    def __init__(self, name):
+        self.name = name
 
-students = [
-    ("Amit", 85),
-    ("Priya", 92),
-    ("Rahul", 78),
-    ("Neha", 88)
-]
+    def sound(self):
+        print("Animal makes a sound")
 
-# Sort by the second element (marks)
-students.sort(key=lambda x: x[1])
 
-print("Sorted List:")
-for student in students:
-    print(student)
+# Child class Dog
+class Dog(Animal):
+    def sound(self):
+        print(self.name, "says: Woof! Woof!")
+
+
+# Child class Cat
+class Cat(Animal):
+    def sound(self):
+        print(self.name, "says: Meow! Meow!")
+
+
+# Create objects
+dog = Dog("Buddy")
+cat = Cat("Kitty")
+
+# Call methods
+dog.sound()
+cat.sound()
