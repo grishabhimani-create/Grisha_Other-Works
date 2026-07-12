@@ -1,7 +1,15 @@
-# Create a tuple of 5 cities
+# Sort a list of tuples by the second element using lambda
 
-cities = ["Mumbai", "Delhi", "Surat", "Pune", "Jaipur"]
+students = [
+    ("Amit", 85),
+    ("Priya", 92),
+    ("Rahul", 78),
+    ("Neha", 88)
+]
 
-cities[1] = "Ahmedabad"
+# Sort by the second element (marks)
+students.sort(key=lambda x: x[1])
 
-print(cities)
+print("Sorted List:")
+for student in students:
+    print(student)
