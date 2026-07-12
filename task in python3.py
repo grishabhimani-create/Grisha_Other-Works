@@ -1,13 +1,26 @@
-# Recursive function to calculate factorial
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.__marks = marks   # Private variable
 
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n - 1)
+    # Getter method
+    def get_marks(self):
+        return self.__marks
 
-# User input
-num = int(input("Enter a number: "))
+    # Setter method
+    def set_marks(self, marks):
+        if 0 <= marks <= 100:
+            self.__marks = marks
+        else:
+            print("Invalid marks! Enter marks between 0 and 100.")
 
-# Display result
-print("Factorial =", factorial(num))
+# Create object
+student = Student("Grisha", 85)
+
+# Get private variable
+print("Student Name:", student.name)
+print("Marks:", student.get_marks())
+
+# Update marks using setter
+student.set_marks(92)
+print("Updated Marks:", student.get_marks())
