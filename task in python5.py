@@ -1,6 +1,21 @@
-# Squares of even numbers from 1 to 20 using list comprehension
+# Simulate a 1D array using a list
 
-squares = [num ** 2 for num in range(1, 21) if num % 2 == 0]
+arr = [10, 20, 30, 40, 50]
 
-print("Squares of even numbers:")
-print(squares)
+print("Original Array:", arr)
+
+# Insert an element
+arr.append(60)
+print("After Inserting 60:", arr)
+
+# Delete an element
+arr.remove(30)
+print("After Deleting 30:", arr)
+
+# Search for an element
+search = int(input("Enter element to search: "))
+
+if search in arr:
+    print(search, "found in the array.")
+else:
+    print(search, "not found in the array.")
