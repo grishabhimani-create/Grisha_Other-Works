@@ -1,14 +1,16 @@
-# Star Pyramid Pattern
+# Set Operations
 
-rows = int(input("Enter the number of rows: "))
+set1 = {"Apple", "Banana", "Mango", "Orange", "Grapes"}
+set2 = {"Mango", "Orange", "Pineapple", "Kiwi", "Apple"}
 
-for i in range(1, rows + 1):
-    # Print spaces
-    for j in range(rows - i):
-        print(" ", end="")
+print("Set 1:", set1)
+print("Set 2:", set2)
 
-    # Print stars
-    for k in range(2 * i - 1):
-        print("*", end="")
+# Union
+print("Union:", set1.union(set2))
 
-    print()
+# Intersection
+print("Intersection:", set1.intersection(set2))
+
+# Difference
+print("Difference (set1 - set2):", set1.difference(set2))
