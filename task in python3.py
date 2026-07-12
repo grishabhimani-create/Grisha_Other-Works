@@ -1,17 +1,13 @@
-# Student List Operations
+# Recursive function to calculate factorial
 
-students = ["Amit", "Rahul", "Priya", "Neha", "Karan"]
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
-print("Original List:", students)
+# User input
+num = int(input("Enter a number: "))
 
-# Add a student
-students.append("Riya")
-print("After Adding:", students)
-
-# Remove a student
-students.remove("Rahul")
-print("After Removing:", students)
-
-# Sort the list
-students.sort()
-print("Sorted List:", students)
+# Display result
+print("Factorial =", factorial(num))
