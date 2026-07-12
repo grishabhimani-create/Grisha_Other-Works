@@ -1,14 +1,25 @@
-# Function using *args to calculate sum
+class BankAccount:
+    # Constructor
+    def __init__(self, account_holder, balance):
+        self.account_holder = account_holder
+        self.balance = balance
+        print("Bank account created successfully!")
 
-def find_sum(*args):
-    total = 0
+    # Display account details
+    def display(self):
+        print("Account Holder:", self.account_holder)
+        print("Balance:", self.balance)
 
-    for num in args:
-        total += num
+    # Destructor
+    def __del__(self):
+        print("Bank account deleted.")
 
-    return total
 
-# Function call
-result = find_sum(10, 20, 30, 40, 50)
+# Create object
+account = BankAccount("Grisha", 5000)
 
-print("Sum =", result)
+# Display details
+account.display()
+
+# Delete object
+del account
