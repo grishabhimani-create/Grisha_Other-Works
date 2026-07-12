@@ -1,14 +1,27 @@
-# List of student names
-students = ["Rahul", "Amit", "Priya", "Neha", "Karan"]
+# Parent class
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print("Person constructor called")
 
-# List of marks
-marks = [78, 92, 85, 67, 90]
 
-# Sort student names alphabetically
-students.sort()
+# Child class
+class Student(Person):
+    def __init__(self, name, age, roll_no):
+        # Call parent class constructor
+        super().__init__(name, age)
+        self.roll_no = roll_no
+        print("Student constructor called")
 
-# Sort marks in descending order
-marks.sort(reverse=True)
+    def display(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Roll No:", self.roll_no)
 
-print("Student Names (Alphabetical):", students)
-print("Marks (Descending):", marks)
+
+# Create object
+student = Student("Grisha", 20, 101)
+
+# Display details
+student.display()
