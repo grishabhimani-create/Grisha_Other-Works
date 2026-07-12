@@ -1,10 +1,14 @@
-# Reverse a string using a loop
+# Function using *args to calculate sum
 
-text = input("Enter a string: ")
+def find_sum(*args):
+    total = 0
 
-reverse = ""
+    for num in args:
+        total += num
 
-for ch in text:
-    reverse = ch + reverse
+    return total
 
-print("Reversed string:", reverse)
+# Function call
+result = find_sum(10, 20, 30, 40, 50)
+
+print("Sum =", result)
