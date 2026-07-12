@@ -1,10 +1,22 @@
-# Check if a number is positive, negative, or zero
+# Count vowels, consonants, spaces, and words
 
-num = float(input("Enter a number: "))
+sentence = input("Enter a sentence: ")
 
-if num > 0:
-    print("The number is Positive.")
-elif num < 0:
-    print("The number is Negative.")
-else:
-    print("The number is Zero.")
+vowels = 0
+consonants = 0
+spaces = 0
+
+for ch in sentence:
+    if ch.lower() in "aeiou":
+        vowels += 1
+    elif ch.isalpha():
+        consonants += 1
+    elif ch == " ":
+        spaces += 1
+
+words = len(sentence.split())
+
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+print("Spaces:", spaces)
+print("Words:", words)
