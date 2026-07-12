@@ -1,19 +1,15 @@
-# Number Guessing Game
+# Dictionary of 3 students
 
-secret_number = 7
-tries = 3
+students = {
+    "Student1": {"name": "Amit", "age": 18, "marks": 85},
+    "Student2": {"name": "Priya", "age": 19, "marks": 92},
+    "Student3": {"name": "Rahul", "age": 18, "marks": 78}
+}
 
-for i in range(tries):
-    guess = int(input("Enter your guess: "))
-
-    if guess == secret_number:
-        print("Congratulations! You guessed the correct number.")
-        break
-    else:
-        print("Wrong guess!")
-
-        if i < tries - 1:
-            print("Try again.")
-            continue
-        else:
-            print("Game Over! The correct number was", secret_number)
+# Print student details
+for student, details in students.items():
+    print(student)
+    print("Name:", details["name"])
+    print("Age:", details["age"])
+    print("Marks:", details["marks"])
+    print()
